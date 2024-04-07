@@ -9,8 +9,9 @@ module.exports = defineConfig({
         },
     ],
     reporter: 'html',
-    retries: process.env.CI ? 2 : 1,
+    //retries: process.env.CI ? 2 : 1,
     use: {
+        //actionTimeout: 5 * 1000, // tuong tu implicit wait
         trace: 'on-first-retry',
         video: 'on-first-retry',
         screenshot: 'only-on-failure'
